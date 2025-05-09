@@ -7,10 +7,27 @@
     Shell.FlyoutBehavior="Disabled"
     Title="BarcodeScannerScanner">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <FlyoutItem Title="Dashboard" x:Name="myflyout" FlyoutDisplayOptions="AsSingleItem">
+        <Tab Title="Home" >
+            <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
+        </Tab>
+
+
+        <Tab Title="Scan">
+            <ShellContent 
+        Title="Scan"  Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+        </Tab>
+    </FlyoutItem>
+
 
 </Shell>
 
