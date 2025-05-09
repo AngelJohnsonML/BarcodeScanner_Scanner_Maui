@@ -3,19 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gv="clr-namespace:BarcodeScanner.Mobile;assembly=BarcodeScanner.Mobile.Maui"
              x:Class="BarcodeScannerScanner.MainPage">
-    <!--
-
+   
     <Grid RowDefinitions="*,Auto">
-        <gv:CameraView IsScanning="{Binding IsScanning}" IsEnabled="True" IsVisible="True"
-                       VibrationOnDetected="True" OnDetectedCommand="{Binding BarcodeDetectedCommand}" ScanInterval="10" />
+        <!--<gv:CameraView x:Name="barcodeScanner" IsScanning="True" IsEnabled="True" IsVisible="True"
+                       VibrationOnDetected="True" OnDetected="CameraView_OnDetected" ScanInterval="10" />-->
 
-        <Label Text="{Binding ScanResult}" Background="White" TextColor="Black" Grid.Row="1" FontSize="Medium"/>
+        <Grid x:Name="ScannerView"/>
 
-    </Grid>
-    -->
-    <Grid RowDefinitions="*,Auto">
-        <gv:CameraView x:Name="barcodeScanner" IsScanning="True" IsEnabled="True" IsVisible="True"
-                       VibrationOnDetected="True" OnDetected="CameraView_OnDetected" ScanInterval="10" />
         <Grid RowDefinitions="*,2*,3*" >
 
             <BoxView Grid.Row="0" BackgroundColor="#80000000"/>
